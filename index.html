@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matt Freytag Construction | Cleveland, TN</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <a href="#" class="nav-home" aria-label="Home"><ion-icon name="home" style="font-size:22px;color:#fff;"></ion-icon></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-icon-box"><ion-icon name="construct" style="font-size:48px;color:#fff;"></ion-icon></div>
+      <h1>
+        <span class="hero-name">Matt Freytag</span>
+        <span class="hero-sub">Construction</span>
+      </h1>
+      <div class="hero-divider"></div>
+      <p class="hero-tagline">Professional. Reliable. Built Right.</p>
+      <a href="#contact" class="btn">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <ul class="services-list">
+        <li>Remodel</li>
+        <li>Trim Carpentry</li>
+        <li>Flooring</li>
+        <li>Hardscapes &amp; Landscaping</li>
+        <li>Roofing</li>
+        <li>Excavation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2 class="section-title">About Us</h2>
+        <p>
+          Matt Freytag Construction has been serving Cleveland, TN and the surrounding areas for over <strong>18 years</strong>.
+          We're a local, owner-operated business built on honesty, quality work, and treating every job — big or small — like it's our own home.
+        </p>
+        <p>
+          From full remodels and custom trim work to excavation and roofing, we bring the same level of craftsmanship and attention to detail to every project we take on.
+        </p>
+        <ul class="about-highlights">
+          <li>&#10003; 18+ Years of Experience</li>
+          <li>&#10003; Owner on Every Job</li>
+          <li>&#10003; Cleveland, TN &amp; Surrounding Areas</li>
+          <li>&#10003; Free Estimates</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <div class="placeholder-img">
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <h2 class="section-title">Our Work</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><span>Remodel</span></div>
+        <div class="gallery-item"><span>Trim Carpentry</span></div>
+        <div class="gallery-item"><span>Flooring</span></div>
+        <div class="gallery-item"><span>Hardscapes</span></div>
+        <div class="gallery-item"><span>Roofing</span></div>
+        <div class="gallery-item"><span>Excavation</span></div>
+      </div>
+      <p class="gallery-note">Photos coming soon — check back for project updates!</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p><strong>Phone:</strong> <a href="tel:4235046127">(423) 504-6127</a></p>
+          <p><strong>Email:</strong> <a href="mailto:sales@mattfreytagconstruction.com">sales@mattfreytagconstruction.com</a></p>
+          <p><strong>Service Area:</strong> Cleveland, TN &amp; Surrounding Areas</p>
+          <p class="hours"><strong>Hours:</strong> Mon–Fri: 7am–6pm &nbsp;|&nbsp; Sat: By Appointment</p>
+        </div>
+
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="0ad5cd9f-dcf4-41cd-a416-7b9fcf87a6ea" />
+          <input type="hidden" name="subject" value="New Lead - Matt Freytag Construction" />
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="tel" name="phone" placeholder="Your Phone Number" />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Matt Freytag Construction &mdash; Cleveland, TN &mdash; <a href="tel:4235046127">(423) 504-6127</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
