@@ -342,7 +342,7 @@ a { text-decoration: none; color: inherit; }
 .contact-info a { color: #e07b2a; }
 .contact-info a:hover { text-decoration: underline; }
 
-.hours { font-size: 0.9rem; color: #666 !important; }
+.hours { color: #444; }
 
 .contact-form {
   display: flex;
