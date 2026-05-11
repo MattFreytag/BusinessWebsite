@@ -276,40 +276,70 @@ a { text-decoration: none; color: inherit; }
   background: #fff;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
+.gallery-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 36px;
 }
 
+.gallery-tab {
+  background: none;
+  border: 2px solid #ddd;
+  padding: 10px 22px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.gallery-tab:hover { border-color: #e07b2a; color: #e07b2a; }
+.gallery-tab.active { background: #e07b2a; border-color: #e07b2a; color: #fff; }
+
+.gallery-grid {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.gallery-grid.active { display: grid; }
+
 .gallery-item {
-  background: #e0e0e0;
-  height: 220px;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover img { transform: scale(1.04); }
+
+.gallery-placeholder {
+  grid-column: 1 / -1;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 2px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: opacity 0.2s;
+  background: #f0f0f0;
+  border: 2px dashed #ccc;
 }
 
-.gallery-item:hover { opacity: 0.85; }
-
-.gallery-item span {
+.gallery-placeholder span {
   font-family: 'Oswald', sans-serif;
   font-size: 1.1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #555;
-}
-
-.gallery-note {
-  text-align: center;
-  margin-top: 32px;
-  color: #888;
-  font-style: italic;
+  color: #999;
 }
 
 /* ===== CONTACT ===== */
