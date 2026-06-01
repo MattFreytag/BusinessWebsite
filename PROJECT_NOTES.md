@@ -13,10 +13,9 @@
 - Remodel
 - Trim Carpentry
 - Flooring
-- Hardscapes / Landscaping
-- Roofing
-- Excavation
-- New Construction
+- Cabinetry
+- Hardscapes
+- Landscaping & Sod
 
 ---
 
@@ -106,8 +105,8 @@ C:\Users\mattf\BusinessWebsite\
 ---
 
 ## Pending / To Do
-- [ ] Add roofing photos to `roofing/` folder
-- [ ] Add new construction photos to `new-construction/` folder
+- [ ] Add cabinetry photos to `cabinetry/` folder (folder not yet created)
+- [ ] Add landscaping & sod photos to `landscaping/` folder (folder not yet created)
 - [ ] Add videos when ready (YouTube/Instagram embeds or local files)
 - [ ] SEO optimization (page title, meta description, keywords, Google Business Profile)
 - [ ] Real logo design to replace text-only hero (discussed for future)
