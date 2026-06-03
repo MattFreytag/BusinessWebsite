@@ -342,8 +342,11 @@ a { text-decoration: none; color: inherit; }
 .lightbox.open { display: flex; }
 
 .lightbox-img {
+  width: auto;
+  height: auto;
   max-width: 90vw;
   max-height: 90vh;
+  min-width: min(600px, 90vw);
   object-fit: contain;
   border-radius: 2px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.6);
