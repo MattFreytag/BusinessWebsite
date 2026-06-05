@@ -24,6 +24,7 @@
 - Google Fonts: Oswald + Open Sans
 - Ionicons (web component) for icons
 - Web3Forms for contact form submissions
+- .gitignore in place — node_modules excluded
 
 ## File Structure
 ```
@@ -31,30 +32,28 @@ C:\Users\mattf\BusinessWebsite\
 ├── index.html
 ├── styles.css
 ├── script.js
-├── Homepage.JPG          ← hero background photo
-├── remodel/              ← photos named 1.jpg, 2.jpg...
-├── trim-carpentry/
-├── flooring/
-├── hardscapes/
-├── roofing/              ← EMPTY, photos needed
-├── excavation/
-└── new-construction/     ← EMPTY, photos needed
+├── .gitignore
+├── Homepage.JPG              ← hero background photo (compressed to 788KB from 8.5MB)
+├── remodel/                  ← 10 photos (1.jpg - 10.jpg)
+├── trim-carpentry/           ← 10 photos
+├── flooring/                 ← 8 photos
+├── cabinetry/                ← 14 photos
+├── hardscapes/               ← 9 photos
+└── landscaping/              ← EMPTY, need good photo (current one was corrupt)
 ```
 
 ---
 
 ## Hosting & Domain
 - **Domain:** MattFreytagConstruction.com (registered on Namecheap)
-- **Hosting:** Netlify (free tier)
-  - Project name: magical-buttercream-12b8ef
-  - Project ID: bd962b17-9717-49cb-b80e-6d3613fc9ec4
-- **DNS:** Namecheap nameservers pointed to Netlify DNS
-  - dns1.p02.nsone.net
-  - dns2.p02.nsone.net
-  - dns3.p02.nsone.net
-  - dns4.p02.nsone.net
-- **GitHub Repo:** github.com/MattFreytag/BusinessWebsite (auto-deploys to Netlify on push)
-- **SSL:** Auto-provisioned by Netlify (Let's Encrypt)
+- **Hosting:** Cloudflare Workers (free tier, unlimited bandwidth) — switched from Netlify which ran out of build credits
+  - Worker name: businesswebsite
+  - Worker URL: businesswebsite.mattfreytag.workers.dev
+- **DNS:** Namecheap nameservers pointed to Cloudflare
+  - arushi.ns.cloudflare.com
+  - keenan.ns.cloudflare.com
+- **GitHub Repo:** github.com/MattFreytag/BusinessWebsite (auto-deploys to Cloudflare on push)
+- **SSL:** Auto-provisioned by Cloudflare
 
 ## Email
 - sales@mattfreytagconstruction.com set up via Namecheap free email forwarding → mattfreytag@att.net
@@ -70,11 +69,11 @@ C:\Users\mattf\BusinessWebsite\
 
 ## Features Built
 - One-page scrolling layout (intentional — better for local contractor SEO + UX)
-- **Hero:** Navy background (#0F3460) + homepage.jpg overlay, split business name style matching the app
+- **Hero:** Navy background (#0F3460) + Homepage.JPG overlay, split business name style matching the app
 - **Nav:** Home icon (house) top left links back to top, hamburger menu on mobile
 - **Services:** Clean text list (no cards — intentional, cleaner look)
 - **About:** 18 years, owner on every job, Cleveland TN, free estimates
-- **Gallery:** Category tabs (Remodel, Trim Carpentry, Flooring, Hardscapes, Roofing, Excavation, New Construction) with lightbox on click — shows photos in correct portrait/landscape orientation, arrow navigation, keyboard support
+- **Gallery:** Category tabs (Remodel, Trim Carpentry, Flooring, Cabinetry, Hardscapes, Landscaping & Sod) with lightbox on click — shows photos in correct portrait/landscape orientation, arrow navigation, keyboard support
 - **Contact:** Phone, email, hours, Web3Forms contact form
 - **Footer:** Business name, phone
 - **Mobile responsive:** Optimized for phone screens
@@ -86,6 +85,8 @@ C:\Users\mattf\BusinessWebsite\
 - Web3Forms over Formspree — 250 free submissions vs 50
 - Generic business email on site (sales@) not personal att.net address
 - Photos numbered 1.jpg, 2.jpg etc. in each folder for easy ordering
+- Homepage.JPG compressed from 8.5MB → 788KB for faster loading, no visible quality loss
+- Switched from Netlify to Cloudflare Workers — Netlify free tier ran out of build credits
 
 ---
 
@@ -99,14 +100,14 @@ C:\Users\mattf\BusinessWebsite\
    git commit -m "your message"
    git push
    ```
-4. Netlify auto-deploys within ~30 seconds
+4. Cloudflare auto-deploys within ~30 seconds
 5. **Batch changes together before pushing to save tokens**
 
 ---
 
 ## Pending / To Do
-- [ ] Add cabinetry photos to `cabinetry/` folder (folder not yet created)
-- [ ] Add landscaping & sod photos to `landscaping/` folder (folder not yet created)
+- [ ] Find portrait-orientation photo for hero background on mobile
+- [ ] Add landscaping & sod photos (current one was corrupt/too small)
 - [ ] Add videos when ready (YouTube/Instagram embeds or local files)
 - [ ] SEO optimization (page title, meta description, keywords, Google Business Profile)
 - [ ] Real logo design to replace text-only hero (discussed for future)
