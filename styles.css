@@ -117,7 +117,7 @@ a { text-decoration: none; color: inherit; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: url('homepage.jpg') center/cover no-repeat;
+  background: url('Homepage.JPG') center/cover no-repeat;
   opacity: 0.35;
 }
 
